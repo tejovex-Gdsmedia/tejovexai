@@ -17,15 +17,26 @@ import { ProblemEngine } from "@/components/friction/problem-engine";
 import { EntranceReveal } from "@/components/ui/entrance-reveal";
 import { VideoBackground } from "@/components/ui/video-background";
 import { HeroTextContainer, HeroTextLine } from "@/components/hero/hero-text-effect";
+import { MagneticButton } from "@/components/ui/magnetic-button";
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Home() {
+  const containerRef = React.useRef(null);
+  const { scrollYProgress } = useScroll({ target: containerRef });
+  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
   return (
     <EntranceReveal>
-      <div className="bg-bg text-text">
+      <div className="bg-bg text-text" ref={containerRef}>
         {/* Cinematic Hero */}
         <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden">
           <HeroBackground />
-          <main className="relative z-10 w-full max-w-7xl px-8 flex flex-col items-center text-center">
+          <motion.main style={{ y }} className="relative z-10 w-full max-w-7xl px-8 flex flex-col items-center text-center">
+            <div className="mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-semibold">
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              AI AUTOMATION ACTIVE
+            </div>
+
             <HeroTextContainer>
               <h1 className="text-7xl md:text-9xl font-bold tracking-tighter leading-[0.9] mb-8 mt-12">
                 <HeroTextLine className="flex justify-center">YOUR BUSINESS.</HeroTextLine>
@@ -37,9 +48,9 @@ export default function Home() {
               We partner with businesses to identify automation opportunities, deploy intelligent AI agents, and create seamless workflows that work around the clock.
             </p>
 
-            <button className="px-8 py-4 bg-accent text-bg font-bold rounded-full hover:scale-105 transition-all text-lg">
+            <MagneticButton className="px-8 py-4 bg-accent text-bg font-bold rounded-full hover:scale-105 transition-all text-lg">
               Watch your business automate
-            </button>
+            </MagneticButton>
           </main>
         </section>
 

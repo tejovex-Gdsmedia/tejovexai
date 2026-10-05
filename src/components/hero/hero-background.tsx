@@ -1,6 +1,7 @@
 "use client";
 
 import { useReducedMotion } from 'framer-motion';
+import { Particles } from '../ui/particles';
 
 export const HeroBackground = () => {
     const shouldReduceMotion = useReducedMotion();
@@ -18,15 +19,11 @@ export const HeroBackground = () => {
                 muted
                 loop
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover opacity-30"
+                className="absolute inset-0 w-full h-full object-cover opacity-50"
             >
-                {/*
-                  NOTE: Replace with your actual cinematic AI automation video asset.
-                  Recommended: WebM format for best performance/quality ratio.
-                */}
-                <source src="/assets/hero-bg.webm" type="video/webm" />
-                <source src="/assets/hero-bg.mp4" type="video/mp4" />
+                <source src="/assets/Tejovex_AI_25s.mp4" type="video/mp4" />
             </video>
+            <Particles />
             {/* Cinematic overlays for readability */}
             <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-bg/40 to-bg" />
         </div>
