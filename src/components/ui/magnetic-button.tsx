@@ -32,6 +32,20 @@ export const MagneticButton = ({ children, className }: { children: React.ReactN
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       className={className}
+      whileHover={{
+        scale: 1.08,
+        boxShadow: [
+          "0 0 0px 0px rgba(0, 181, 252, 0.4)",
+          "0 0 20px 10px rgba(0, 181, 252, 0.2)",
+          "0 0 0px 0px rgba(0, 181, 252, 0.4)",
+        ],
+        transition: {
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
+      }}
+      whileTap={{ scale: 0.95 }}
     >
       {children}
     </motion.button>

@@ -1,28 +1,80 @@
 "use client";
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { HeroTextContainer, HeroTextLine } from "@/components/hero/hero-text-effect";
+import { useRouter } from 'next/navigation';
+import { WordReveal } from '../shared/WordReveal';
+import { MagneticButton } from '../shared/MagneticButton';
 
-export const AboutHero = () => {
-  return (
-    <section className="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden pt-20">
-      <div className="relative z-10 w-full max-w-7xl px-8 flex flex-col items-center text-center">
-        <HeroTextContainer>
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-8">
-            <HeroTextLine className="flex justify-center">BUILDING THE FUTURE</HeroTextLine>
-            <HeroTextLine className="flex justify-center text-accent">OF BUSINESS WITH AI</HeroTextLine>
-          </h1>
-        </HeroTextContainer>
+export default function AboutHero() {
+    const router = useRouter();
 
-        <motion.p
-          className="max-w-2xl text-lg md:text-xl text-text-muted mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          We combine artificial intelligence, automation, and business strategy to create scalable solutions that improve efficiency, enhance customer experiences, and accelerate growth.
-        </motion.p>
-      </div>
-    </section>
-  );
-};
+    const handleStartProject = () => {
+        router.push('/contact#contact-form');
+    };
+
+    return (
+        <section className="relative h-screen w-full bg-bg flex flex-col items-center justify-center overflow-hidden">
+            {/* Background Orbs */}
+            <motion.div
+                className="absolute w-[400px] h-[400px] rounded-full bg-accent/20 blur-[120px] opacity-30"
+                animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+                className="absolute w-[400px] h-[400px] rounded-full bg-accent-secondary/20 blur-[120px] opacity-20"
+                animate={{ x: [0, -100, 0], y: [0, 50, 0] }}
+                transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+            />
+
+            <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-accent text-sm uppercase tracking-widest mb-4"
+            >
+                • About Us
+            </motion.div>
+
+            <WordReveal
+                text="Building the Future of Business with AI"
+                className="text-6xl font-bold text-text mb-6 text-center max-w-4xl"
+            />
+
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="text-text-muted text-lg mb-8 text-center max-w-lg"
+            >
+                We don't just implement technology — we rethink how your business operates from the ground up.
+            </motion.p>
+
+            <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                onClick={handleStartProject}
+                className="px-8 py-4 bg-accent text-bg font-bold rounded-full hover:scale-105 transition-all"
+            >
+                Start a Project →
+            </motion.button>
+
+            <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 1 }}
+                className="absolute bottom-10 left-10 text-text flex items-center gap-2 border border-text/20 px-4 py-2 rounded-full"
+            >
+                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                Based in Mumbai, India
+            </motion.div>
+
+            <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="absolute bottom-5 text-text"
+            >
+                ↓
+            </motion.div>
+        </section>
+    );
+}

@@ -1,35 +1,35 @@
 "use client";
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { AnimatedSection } from '../ui/animated-section';
+
+import { motion } from 'framer-motion';
 
 const testimonials = [
-  { name: "Rahul Sharma", title: "Sales Director, Mumbai", quote: "Tejovex AI helped us automate our lead qualification process and follow-ups. What used to take hours every day is now handled automatically, allowing our sales team to focus on closing deals." },
-  { name: "Pankaj Mishra", title: "Founder, Ahmedabad", quote: "The AI customer support agent significantly reduced our response time and improved customer satisfaction. Our customers now get instant answers 24/7." },
-  { name: "Ankit Singh", title: "Operations Manager, Surat", quote: "We wanted to automate repetitive operational tasks but didn't know where to start. The Tejovex AI team designed a solution that saved our staff countless hours every week." },
+  { quote: 'Tejovex built us a WhatsApp AI that qualifies leads before our team picks up the phone. 3 hours saved daily.', author: 'CA Firm Owner, Mumbai' },
+  { quote: 'Our clinic handles bookings, reminders and follow-ups automatically. Patients love the instant responses.', author: 'Doctor, Jodhpur' },
+  { quote: 'Every Instagram lead now gets an instant reply and enters our CRM automatically. Game changer.', author: 'Aesthetics Clinic, Borivali' },
 ];
 
-export const AboutTestimonials = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    return (
-        <AnimatedSection className="py-24 px-8 max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16">What Our Clients Say</h2>
-            <div className="relative p-12 bg-surface/10 rounded-3xl border border-surface min-h-[300px] flex items-center justify-center">
-                <AnimatePresence mode="wait">
-                    <motion.div key={activeIndex} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='max-w-3xl'>
-                        <p className="text-2xl md:text-3xl italic mb-8">"{testimonials[activeIndex].quote}"</p>
-                        <p className="text-xl font-bold">{testimonials[activeIndex].name}</p>
-                        <p className="text-text-muted">{testimonials[activeIndex].title}</p>
-                    </motion.div>
-                </AnimatePresence>
-            </div>
-
-            <div className="flex justify-center gap-2 mt-8">
-                {testimonials.map((_, index) => (
-                    <button key={index} className={`w-3 h-3 rounded-full ${activeIndex === index ? 'bg-accent' : 'bg-surface'}`} onClick={() => setActiveIndex(index)} />
-                ))}
-            </div>
-        </AnimatedSection>
-    );
-};
+export default function AboutTestimonials() {
+  return (
+    <section className="py-20 bg-bg text-text">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold mb-12">Client Success Stories</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((t, i) => (
+            <motion.div
+              key={i}
+              initial={{ rotateX: 20, y: 60, opacity: 0 }}
+              whileInView={{ rotateX: 0, y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.2 }}
+              whileHover={{ y: -8 }}
+              className="bg-surface p-8 rounded-xl border border-text/10"
+            >
+              <p className="text-text-muted mb-6 font-serif">"{t.quote}"</p>
+              <p className="font-bold text-accent-secondary">- {t.author}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

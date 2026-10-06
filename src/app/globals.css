@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  /* Design System - Tejovex AI - Updated Palette */
-  --bg: #1D4533;        /* Dark Forest Green */
-  --surface: #5E3122;   /* Dark Brown */
-  --text: #F7EAE0;      /* Warm Off-White */
-  --text-muted: #F9D2BA; /* Soft Peach-Orange */
+  /* New Cinematic Color Theme (Light Mode Default) */
+  --bg: #FFFFFF;        /* White Background */
+  --surface: #FFFFFF;
+  --text: #050505;      /* Near Black Text */
+  --text-muted: #4A5568; /* Slate Text */
+  --accent: #00B5FC;    /* Vibrant Blue */
+  --accent-secondary: #343C9A; /* Deep Navy */
+  --highlight: #E2172D; /* Action Red */
 
-  --accent: #F9D2BA;    /* Soft Peach-Orange */
-
-  --font-sans: "Inter", sans-serif;
+  /* Typography Tokens - Elegant Serif System */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-sans: "Lora", Georgia, serif;
 }
 
 @theme inline {
@@ -18,14 +23,98 @@
   --color-text: var(--text);
   --color-text-muted: var(--text-muted);
   --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-highlight: var(--highlight);
 
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-body);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.3px;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Display Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 600;
+}
+
+/* Body Text */
+p {
+  font-family: var(--font-body);
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+/* Buttons and Labels */
+button, a, label, .button, .label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Form Elements */
+input, textarea, select {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* Navigation */
+nav, [role="navigation"] {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* Caption and Small Text */
+small, .caption, .text-sm {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* Uppercase Labels */
+.uppercase, .label-uppercase {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Premium Accent Text */
+.accent-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }

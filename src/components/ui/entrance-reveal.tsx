@@ -2,12 +2,29 @@
 import { motion } from "framer-motion";
 import { transition } from "@/lib/motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export const EntranceReveal = ({ children }: { children: React.ReactNode }) => {
+  const [shouldShow, setShouldShow] = useState(false);
+
+  useEffect(() => {
+    // Check session storage to see if the user has already visited in this session
+    const hasVisited = sessionStorage.getItem("hasVisited");
+
+    if (!hasVisited) {
+      setShouldShow(true);
+      sessionStorage.setItem("hasVisited", "true");
+    }
+  }, []);
+
+  if (!shouldShow) {
+    return <>{children}</>;
+  }
+
   return (
     <div className="relative overflow-hidden min-h-screen">
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center bg-[#1D4533]"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-[#080D24]"
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{ delay: 2.5, duration: 0.5 }}

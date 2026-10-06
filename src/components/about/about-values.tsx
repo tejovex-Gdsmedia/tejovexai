@@ -1,46 +1,56 @@
 "use client";
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { AnimatedSection } from '../ui/animated-section';
+import { WordReveal } from '../shared/WordReveal';
 
 const values = [
-  {
-    title: "Business-First Thinking",
-    description: "Every solution starts with understanding your business goals. We focus on solving real operational challenges and delivering measurable outcomes, not just implementing technology for the sake of it."
-  },
-  {
-    title: "Practical Innovation",
-    description: "We leverage the latest AI technologies to create practical solutions that improve efficiency, streamline workflows, and generate tangible business results."
-  },
-  {
-    title: "Transparency & Trust",
-    description: "From planning to deployment, we maintain clear communication, realistic expectations, and complete transparency throughout every project."
-  },
-  {
-    title: "Continuous Improvement",
-    description: "AI is constantly evolving, and so are we. We continuously optimize, monitor, and refine solutions to ensure long-term performance and scalability."
-  }
+  { title: 'Business-First Thinking', desc: 'Every automation starts with one question — does this make your business more money or save you time?' },
+  { title: 'Practical Innovation', desc: 'We use proven tools, not experimental tech. Battle-tested systems that work in real Indian businesses.' },
+  { title: 'Transparency & Trust', desc: 'No black boxes. You see exactly what we build and what results to expect — before and after.' },
+  { title: 'Continuous Improvement', desc: 'Your automation is never done. We monitor, optimise, and upgrade as your business grows.' },
 ];
 
-export const AboutValues = () => {
+export default function AboutValues() {
   return (
-    <AnimatedSection className="py-24 px-8 max-w-7xl mx-auto">
-      <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">THE VALUES BEHIND EVERY AI SOLUTION</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {values.map((value, index) => (
-          <motion.div
-            key={index}
-            className="p-8 border border-surface rounded-2xl bg-surface/10 hover:bg-surface/20 transition-colors"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1 }}
-          >
-            <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
-            <p className="text-text-muted">{value.description}</p>
-          </motion.div>
-        ))}
+    <section className="py-20 bg-surface text-text">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-accent text-sm uppercase tracking-widest mb-4"
+        >
+          • Our Foundation
+        </motion.div>
+
+        <WordReveal
+            text="The Principles Behind Every AI Solution We Build"
+            className="text-4xl font-bold mb-12"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {values.map((v, i) => (
+            <motion.div
+              key={i}
+              initial={{ rotateY: 90, opacity: 0 }}
+              whileInView={{ rotateY: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              className="bg-bg p-8 rounded-xl border border-text/10"
+              style={{ perspective: '1000px' }}
+              whileHover={{
+                y: -10,
+                rotateX: 5,
+                borderColor: 'var(--color-accent)',
+                scale: 1.02
+              }}
+            >
+              <h3 className="text-xl font-bold mb-4">{v.title}</h3>
+              <p className="text-text-muted">{v.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </AnimatedSection>
+    </section>
   );
-};
+}

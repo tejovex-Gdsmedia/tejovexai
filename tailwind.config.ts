@@ -9,13 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0a0a0a",
-        surface: "#171717",
-        accent: "#00d4ff",
-        text: "#e5e5e5",
+        bg: "#FFFFFF",
+        surface: "#FFFFFF",
+        text: "#050505",
+        "text-muted": "#4A5568",
+        accent: "#00B5FC",
+        "accent-secondary": "#343C9A",
+        highlight: "#E2172D",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)"],
+        display: ["Cormorant Garamond", "Georgia", "serif"],
+        serif: ["Lora", "Georgia", "serif"],
+        sans: ["Lora", "Georgia", "serif"],
         mono: ["var(--font-geist-mono)"],
       },
     },
