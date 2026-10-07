@@ -36,7 +36,7 @@ export default function AboutHero() {
 
             <WordReveal
                 text="Building the Future of Business with AI"
-                className="text-6xl font-bold text-text mb-6 text-center max-w-4xl"
+                className="text-6xl font-bold text-text mb-6 text-center justify-center max-w-4xl"
             />
 
             <motion.p
