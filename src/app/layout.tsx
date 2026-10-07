@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, Anton } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/navigation/navbar";
@@ -13,6 +13,25 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+// "Humane" isn't a Google Font / freely licensable font, so this uses
+// Bebas Neue (a free, bold display face from Google Fonts) as the closest
+// available substitute for the section badge labels (FAQ, PROCESS, etc.).
+const badgeFont = Bebas_Neue({
+  variable: "--font-badge",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+// The real "Humane" typeface is a proprietary font custom-commissioned for
+// the Humane AI company by Production Type — it isn't publicly licensable,
+// so this uses Anton (a free, bold/blocky Google Font) as the closest
+// available match for "THE PROBLEM" badge specifically.
+const problemBadgeFont = Anton({
+  variable: "--font-problem-badge",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -55,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${badgeFont.variable} ${problemBadgeFont.variable} h-full antialiased`}
     >
       <head>
         {/* Google Analytics - Replace G-XXXXXXXXXX with your actual GA4 Measurement ID */}

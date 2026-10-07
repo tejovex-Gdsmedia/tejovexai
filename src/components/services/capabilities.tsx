@@ -90,7 +90,7 @@ export const CapabilitiesSection = () => {
   return (
     <section id="capabilities" className="py-24 px-8 bg-bg text-text">
       <div className="text-center mb-4">
-        <span className="inline-block px-4 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-widest border border-accent/40 bg-accent/10 text-accent">
+        <span className="inline-block px-4 py-1 rounded-full font-badge font-normal text-4xl uppercase tracking-widest border border-accent/40 bg-accent/10 text-accent">
           • Capabilities
         </span>
       </div>

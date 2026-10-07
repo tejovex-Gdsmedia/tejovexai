@@ -28,6 +28,8 @@
 
   --font-sans: var(--font-body);
   --font-mono: var(--font-geist-mono);
+  --font-badge: var(--font-badge);
+  --font-problem-badge: var(--font-problem-badge);
 }
 
 body {
