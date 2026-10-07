@@ -1,6 +1,10 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { AlarmClock } from '@/components/animate-ui/icons/alarm-clock';
+import { Moon } from '@/components/animate-ui/icons/moon';
+import { Link as LinkIcon } from '@/components/animate-ui/icons/link';
+import { ChartNoAxesColumnIncreasing } from '@/components/animate-ui/icons/chart-no-axes-column-increasing';
 
 const problems = [
   {
@@ -54,7 +58,7 @@ const itemVariants = {
 
 export const ProblemScene = () => {
   return (
-    <section className="py-24 px-8 bg-bg text-text">
+    <section className="py-24 px-8 bg-bg/80 text-text">
       <div className="text-center mb-4">
         <span className="inline-block px-4 py-1 rounded-full font-problem-badge font-normal text-4xl uppercase tracking-widest border border-accent/40 bg-accent/10 text-accent">
           • The Problem
@@ -88,7 +92,19 @@ export const ProblemScene = () => {
             style={{ transformStyle: 'preserve-3d', perspective: 1000 }}
             whileHover={{ y: -8, scale: 1.02 }}
           >
-            <div className="text-4xl mb-4">{p.icon}</div>
+            <div className="text-4xl mb-4">
+              {p.title === "Hours Wasted on Manual Tasks" ? (
+                <AlarmClock animateOnHover className="text-black" size={36} />
+              ) : p.title === "Business Stops When You Sleep" ? (
+                <Moon animateOnHover className="text-black" size={36} />
+              ) : p.title === "Tools That Don't Talk to Each Other" ? (
+                <LinkIcon animateOnHover className="text-black" size={36} />
+              ) : p.title === "No Visibility Into Your Business" ? (
+                <ChartNoAxesColumnIncreasing animateOnHover className="text-black" size={36} />
+              ) : (
+                p.icon
+              )}
+            </div>
             <h3 className="text-lg font-bold mb-2 text-text">{p.title}</h3>
             <p className="text-text-muted text-sm leading-relaxed">{p.desc}</p>
           </motion.div>

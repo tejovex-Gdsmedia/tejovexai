@@ -15,6 +15,25 @@
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Lora", Georgia, serif;
   --font-sans: "Lora", Georgia, serif;
+
+  /* shadcn/ui component tokens (badge/button/card) — mapped onto the
+     existing palette above so these components match the site instead
+     of introducing a second color system. Nothing above is changed. */
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--surface);
+  --card-foreground: var(--text);
+  --primary: var(--accent);
+  --primary-foreground: var(--bg);
+  --secondary: var(--surface);
+  --secondary-foreground: var(--text);
+  --muted-foreground: var(--text-muted);
+  --destructive: var(--highlight);
+  --destructive-foreground: #FFFFFF;
+  --accent-foreground: var(--bg);
+  --border: rgba(5, 5, 5, 0.1);
+  --input: rgba(5, 5, 5, 0.1);
+  --ring: var(--accent);
 }
 
 @theme inline {
@@ -30,6 +49,28 @@
   --font-mono: var(--font-geist-mono);
   --font-badge: var(--font-badge);
   --font-problem-badge: var(--font-problem-badge);
+
+  /* shadcn/ui component tokens */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -125,6 +166,10 @@ small, .caption, .text-sm {
 @keyframes marqueeScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+.logo-marquee {
+  overflow: hidden;
 }
 
 .marquee-track {

@@ -10,7 +10,7 @@ const tools = [
 
 export default function AboutTechStack() {
   return (
-    <section className="py-20 bg-bg text-text overflow-hidden">
+    <section className="py-20 bg-bg/80 text-text overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
         <h2 className="text-4xl font-bold">Tools We Use</h2>
       </div>

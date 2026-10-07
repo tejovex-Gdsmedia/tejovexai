@@ -13,7 +13,7 @@ export default function AboutHero() {
     };
 
     return (
-        <section className="relative h-screen w-full bg-bg flex flex-col items-center justify-center overflow-hidden">
+        <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
             {/* Background Orbs */}
             <motion.div
                 className="absolute w-[400px] h-[400px] rounded-full bg-accent/20 blur-[120px] opacity-30"

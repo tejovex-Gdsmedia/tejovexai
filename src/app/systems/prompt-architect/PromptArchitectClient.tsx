@@ -36,12 +36,12 @@ export default function PromptArchitectClient() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="bg-bg text-text"
+      className="text-text"
     >
       <ScrollProgressBar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] w-full bg-bg flex flex-col items-center justify-center overflow-hidden pt-20 px-8">
+      <section className="relative min-h-[80vh] w-full bg-bg/60 flex flex-col items-center justify-center overflow-hidden pt-20 px-8">
         {/* Animated Orbs */}
         <motion.div
           className="absolute w-[400px] h-[400px] rounded-full bg-accent/20 blur-[150px] opacity-30"
@@ -148,7 +148,7 @@ export default function PromptArchitectClient() {
       </section>
 
       {/* What It Does Section */}
-      <section className="py-20 px-8 bg-bg">
+      <section className="py-20 px-8 bg-bg/80">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -185,7 +185,7 @@ export default function PromptArchitectClient() {
       </section>
 
       {/* Preview Section */}
-      <section className="py-20 px-8 bg-bg">
+      <section className="py-20 px-8 bg-bg/80">
         <div className="max-w-5xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -240,7 +240,7 @@ export default function PromptArchitectClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-8 bg-bg">
+      <section className="py-20 px-8 bg-bg/80">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

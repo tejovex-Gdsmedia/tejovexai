@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navigation/navbar";
 import { Footer } from "@/components/common/footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { GridPulse } from "@/components/ui/grid-pulse";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="canonical" href="https://tejovex.ai" />
       </head>
       <body className="min-h-full flex flex-col">
+        <GridPulse className="fixed inset-0 -z-10" />
         <Navbar />
         <main className="flex-grow pt-24">{children}</main>
         <Footer />

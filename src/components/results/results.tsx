@@ -40,7 +40,7 @@ const cases = [
 
 export const ResultsSection = () => {
   return (
-    <section id="results" className="py-24 px-8 bg-bg text-text">
+    <section id="results" className="py-24 px-8 bg-bg/80 text-text">
       {/* Label */}
       <div className="text-center mb-4">
         <span className="inline-block px-4 py-1 rounded-full font-badge font-normal text-4xl uppercase tracking-widest border border-accent/40 bg-accent/10 text-accent">

@@ -16,14 +16,14 @@ export default function ContactPageClient() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="bg-bg text-text"
+      className="text-text"
     >
       <ScrollProgressBar />
 
       <ContactHero />
       <ActivityTicker />
 
-      <section className="py-20 px-8 bg-bg">
+      <section className="py-20 px-8 bg-bg/80">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <ContactMethods />
           <ContactForm />

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutContactForm() {
     return (
-        <section className="flex flex-col md:flex-row min-h-screen bg-bg text-text">
+        <section className="flex flex-col md:flex-row min-h-screen bg-bg/80 text-text">
             <div className="md:w-1/2 bg-accent-secondary text-white p-20 flex flex-col justify-center">
                 <motion.h2
                     initial={{ y: 20, opacity: 0 }}

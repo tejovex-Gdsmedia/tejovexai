@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function PrivacyPolicy() {
   return (
-    <div className="bg-bg text-text min-h-screen">
+    <div className="bg-bg/85 text-text min-h-screen">
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-20">
         {/* Header */}
         <motion.div

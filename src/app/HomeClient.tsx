@@ -38,7 +38,7 @@ export default function HomeClient() {
         className="fixed top-0 left-0 right-0 h-1 bg-accent z-50 origin-left"
         style={{ scaleX }}
       />
-      <div className="bg-bg text-text" ref={containerRef}>
+      <div className="text-text" ref={containerRef}>
         {/* Cinematic Hero */}
         <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden w-full box-border">
           <HeroBackground />

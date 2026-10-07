@@ -33,7 +33,7 @@ const Counter = ({ value, suffix }: { value: number, suffix: string }) => {
 
 export const TrustBar = () => {
   return (
-    <section className="bg-bg py-16 border-t border-accent/20">
+    <section className="bg-bg/60 py-16 border-t border-accent/20">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-12">
           <p className="text-text-muted mb-4">

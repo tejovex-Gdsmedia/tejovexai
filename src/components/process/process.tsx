@@ -1,54 +1,58 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { Search, Code, Rocket, Activity } from 'lucide-react';
+import RadialOrbitalTimeline from '@/components/ui/radial-orbital-timeline';
 
-const steps = [
+const timelineData = [
   {
-    step: "01",
+    id: 1,
     title: "Free AI Audit",
-    time: "Week 1–2",
-    desc: "We map your business processes, identify automation gaps, and present a prioritised blueprint. No tech knowledge needed.",
+    date: "Week 1–2",
+    content: "We map your business processes, identify automation gaps, and present a prioritised blueprint. No tech knowledge needed.",
+    category: "Audit",
+    icon: Search,
+    relatedIds: [2],
+    status: "pending" as const,
+    energy: 20,
   },
   {
-    step: "02",
+    id: 2,
     title: "Design & Build",
-    time: "Week 2–4",
-    desc: "Our team builds your custom AI workflows using n8n, WhatsApp API, and AI agents — tested before a single line goes live.",
+    date: "Week 2–4",
+    content: "Our team builds your custom AI workflows using n8n, WhatsApp API, and AI agents — tested before a single line goes live.",
+    category: "Build",
+    icon: Code,
+    relatedIds: [1, 3],
+    status: "pending" as const,
+    energy: 45,
   },
   {
-    step: "03",
+    id: 3,
     title: "Launch & Integrate",
-    time: "Week 4–6",
-    desc: "We connect all your tools — CRM, WhatsApp, email, spreadsheets — and go live. You see results from Day 1.",
+    date: "Week 4–6",
+    content: "We connect all your tools — CRM, WhatsApp, email, spreadsheets — and go live. You see results from Day 1.",
+    category: "Launch",
+    icon: Rocket,
+    relatedIds: [2, 4],
+    status: "in-progress" as const,
+    energy: 75,
   },
   {
-    step: "04",
+    id: 4,
     title: "Monitor & Optimise",
-    time: "Week 6+",
-    desc: "We track performance, fix errors, and keep improving your automations as your business grows.",
+    date: "Week 6+",
+    content: "We track performance, fix errors, and keep improving your automations as your business grows.",
+    category: "Optimise",
+    icon: Activity,
+    relatedIds: [3],
+    status: "completed" as const,
+    energy: 100,
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.5 }
-  }
-};
-
 export const ProcessSection = () => {
   return (
-    <section id="process" className="py-24 px-8 bg-bg text-text">
+    <section id="process" className="py-24 px-8 bg-bg/80 text-text">
       <div className="text-center mb-4">
         <span className="inline-block px-4 py-1 rounded-full font-badge font-normal text-4xl uppercase tracking-widest border border-accent/40 bg-accent/10 text-accent">
           • Process
@@ -65,34 +69,12 @@ export const ProcessSection = () => {
         We handle everything — strategy, build, launch, and support. You just show up and approve.
       </p>
 
-      <motion.div
-        className="max-w-4xl mx-auto space-y-8"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        {steps.map((s, i) => (
-          <motion.div
-            key={i}
-            className="flex items-start gap-6 p-6 rounded-2xl border border-accent/20 bg-accent/5"
-            variants={itemVariants}
-          >
-            <div className="text-accent font-mono font-bold text-lg pt-1">
-              Step {s.step}
-            </div>
-            <div>
-              <div className="flex items-baseline gap-4 mb-2">
-                <h3 className="text-xl font-bold text-text">{s.title}</h3>
-                <span className="text-xs font-mono uppercase tracking-widest text-accent/80">
-                  {s.time}
-                </span>
-              </div>
-              <p className="text-text-muted text-sm leading-relaxed">{s.desc}</p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+      <div className="max-w-4xl mx-auto">
+        <RadialOrbitalTimeline timelineData={timelineData} />
+      </div>
+      <p className="text-center text-text-muted text-xs uppercase tracking-widest mt-4">
+        Tap a step to see details
+      </p>
 
       <div className="text-center mt-16">
         <a

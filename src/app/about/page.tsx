@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
-        <main className="bg-bg">
+        <main className="">
             <ScrollProgressBar />
 
             <AboutHero />

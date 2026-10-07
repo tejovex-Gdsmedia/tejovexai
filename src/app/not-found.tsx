@@ -8,7 +8,7 @@ export default function NotFound() {
   const router = useRouter();
 
   return (
-    <div className="bg-bg text-text min-h-screen flex items-center justify-center">
+    <div className="text-text min-h-screen flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

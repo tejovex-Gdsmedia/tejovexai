@@ -13,7 +13,7 @@ export default function ActivityTicker() {
   ];
 
   return (
-    <section className="py-8 px-8 bg-bg border-y border-accent/10 overflow-hidden">
+    <section className="py-8 px-8 bg-bg/80 border-y border-accent/10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="relative flex overflow-hidden">
           <style>{`

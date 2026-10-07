@@ -6,7 +6,7 @@ export default function ContactHero() {
   const words = "Let's Build Intelligent Things".split(' ');
 
   return (
-    <section className="relative min-h-screen w-full bg-bg flex flex-col items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden pt-20">
       {/* Animated Orbs */}
       <motion.div
         className="absolute w-[400px] h-[400px] rounded-full bg-accent/20 blur-[150px] opacity-30"

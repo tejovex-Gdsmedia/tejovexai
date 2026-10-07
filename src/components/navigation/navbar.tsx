@@ -130,6 +130,13 @@ export const Navbar = () => {
               About
             </Link>
             <Link
+              href="/systems/prompt-architect"
+              className={`${getLinkClass('/systems')} text-sm py-2`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Systems
+            </Link>
+            <Link
               href="/contact"
               className={`${getLinkClass('/contact')} text-sm py-2`}
               onClick={() => setIsMobileMenuOpen(false)}
