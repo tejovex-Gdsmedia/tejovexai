@@ -72,7 +72,7 @@ export default function ContactHero() {
         {/* Contact Pills */}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-16">
           {[
-            { icon: "💬", label: "WhatsApp Us", href: "https://wa.me/919322711741" },
+            { icon: "💬", label: "WhatsApp Us", href: "https://wa.me/917400168255" },
             { icon: "📅", label: "Book a Call", href: "#" },
             { icon: "📧", label: "Email Us", href: "mailto:hello@tejovexai.com" },
           ].map((item, i) => (

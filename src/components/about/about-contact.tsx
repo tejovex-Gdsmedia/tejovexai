@@ -17,13 +17,14 @@ export default function AboutContactForm() {
                     {['Mumbai India', 'Worldwide Projects',
                       <a
                         key="whatsapp"
-                        href="https://wa.me/919322711741"
+                        href="https://wa.me/7400168255"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-accent transition-colors"
                       >
                         WhatsApp Support
-                      </a>,
+                      </a>
+                      ,
                       'Reply in 24hrs'].map((item, i) => (
                         <motion.div
                             key={i}

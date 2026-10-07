@@ -10,10 +10,10 @@ export default function ContactMethods() {
       icon: "💬",
       title: "Chat on WhatsApp",
       subtitle: "Fastest response — usually within 5 minutes",
-      action: "+91 9322711741",
+      action: "+91 7400168255",
       badge: "● Online Now",
       isPrimary: true,
-      href: "https://wa.me/919322711741",
+      href: "https://wa.me/917400168255",
       color: "#25D366",
     },
     {
