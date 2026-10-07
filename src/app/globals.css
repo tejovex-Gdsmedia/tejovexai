@@ -157,3 +157,15 @@ small, .caption, .text-sm {
   box-shadow: 0 4px 16px rgba(26,74,46,0.15);
   transform: scale(1.04);
 }
+
+/* Hide Netlify badge */
+[data-netlify-deploy-id],
+.netlify-identity-button,
+a[href*="netlify.com"][style*="position: fixed"] {
+  display: none !important;
+}
+
+#netlify-badge-wrapper,
+.netlify-badge {
+  display: none !important;
+}
