@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://tejovex.ai",
   },
+  icons: {
+    icon: "/tejo-logo.png",
+    shortcut: "/tejo-logo.png",
+    apple: "/tejo-logo.png",
+  },
   openGraph: {
     title: "Tejovex AI | AI Automation & Intelligent Business Systems",
     description: "Tejovex AI helps businesses automate operations, sales, marketing and customer support with intelligent AI agents and connected workflows.",
