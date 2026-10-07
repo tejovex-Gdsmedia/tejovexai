@@ -118,3 +118,42 @@ small, .caption, .text-sm {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
+/* Client Marquee Animation */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: max-content;
+  animation: marqueeScroll 35s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.client-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 1px solid #e5e5e5;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  white-space: nowrap;
+  cursor: default;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.client-pill:hover {
+  border-color: #1a4a2e;
+  box-shadow: 0 4px 16px rgba(26,74,46,0.15);
+  transform: scale(1.04);
+}
