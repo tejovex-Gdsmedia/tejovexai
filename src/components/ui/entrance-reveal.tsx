@@ -2,17 +2,22 @@
 import { motion } from "framer-motion";
 import { transition } from "@/lib/motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 export const EntranceReveal = ({ children }: { children: React.ReactNode }) => {
-  const [shouldShow, setShouldShow] = useState(false);
+  // Default to showing the splash so it's visible on the very first paint
+  // instead of flashing the page content before the splash mounts.
+  const [shouldShow, setShouldShow] = useState(true);
 
-  useEffect(() => {
-    // Check session storage to see if the user has already visited in this session
+  useLayoutEffect(() => {
+    // Check session storage to see if the user has already visited in this session.
+    // useLayoutEffect runs before the browser paints, so if they've already
+    // visited we skip the splash without it ever flashing on screen.
     const hasVisited = sessionStorage.getItem("hasVisited");
 
-    if (!hasVisited) {
-      setShouldShow(true);
+    if (hasVisited) {
+      setShouldShow(false);
+    } else {
       sessionStorage.setItem("hasVisited", "true");
     }
   }, []);
