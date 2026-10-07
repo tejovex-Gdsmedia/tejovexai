@@ -35,7 +35,7 @@ export const HeroTextLine = ({ children, className, split = false, wordSplit = f
               visible: { opacity: 1, y: 0, rotate: 0, transition: { duration: 0.5 } }
             }}
           >
-            {char}
+            {char === " " ? " " : char}
           </motion.span>
         ))}
       </motion.div>

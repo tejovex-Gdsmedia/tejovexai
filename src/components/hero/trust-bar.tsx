@@ -7,7 +7,7 @@ import { ClientMarquee } from '../shared/ClientMarquee';
 const stats = [
   { value: 120, label: "Projects Delivered", suffix: "+" },
   { value: 24, label: "AI Agents Running", suffix: "/7" },
-  { value: 8, label: "Idea to Production", suffix: "–10 Wks" },
+  { value: 1, label: "Idea to Production", suffix: " to 7 Days" },
   { value: 100, label: "Indian MSME Focus", suffix: "%" },
 ];
 
@@ -37,7 +37,7 @@ export const TrustBar = () => {
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-12">
           <p className="text-text-muted mb-4">
-            Trusted by 100+ clients across various industries — shipping AI from idea to production in 8–10 weeks
+            Trusted by 100+ clients across various industries — shipping AI from idea to production in 1 to 7 days
           </p>
           <div className="text-accent font-mono text-sm">
             ⭐⭐⭐⭐⭐ Trustpilot | 4.9 / 5

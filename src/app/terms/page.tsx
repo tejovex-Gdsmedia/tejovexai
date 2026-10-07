@@ -117,7 +117,7 @@ export default function Terms() {
             <ul className="list-disc list-inside space-y-2 text-text-muted ml-4">
               <li>Responding to inquiries within 5 minutes on WhatsApp during business hours</li>
               <li>Responding to email inquiries within 24 hours</li>
-              <li>Delivering solutions within the agreed timeline (typically 8-10 weeks)</li>
+              <li>Delivering solutions within the agreed timeline (typically 1 to 7 days)</li>
               <li>Maintaining 99.5% uptime for deployed AI agents</li>
               <li>Providing 24/7 monitoring and support for production systems</li>
             </ul>

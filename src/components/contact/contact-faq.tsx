@@ -13,7 +13,7 @@ export default function ContactFAQ() {
     },
     {
       q: "What's your typical project timeline?",
-      a: "Most AI implementations take 2-4 weeks from discovery to deployment. We move fast because we know time is money.",
+      a: "Most AI implementations take 1 to 7 days from discovery to deployment. We move fast because we know time is money.",
     },
     {
       q: "Can you integrate with our existing tools?",

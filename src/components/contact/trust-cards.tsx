@@ -7,7 +7,7 @@ export default function TrustCards() {
     {
       icon: "⚡",
       title: "Fast Implementation",
-      description: "From audit to live automation in 8–10 weeks. Guaranteed.",
+      description: "From audit to live automation in 1 to 7 days. Guaranteed.",
     },
     {
       icon: "🇮🇳",

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const faqs = [
   {
     q: "How long does it take to set up an automation?",
-    a: "Typically 8–10 weeks from audit to live launch. Simple single-flow automations can go live in 2–3 weeks.",
+    a: "Typically 1 to 7 days from audit to live launch. Simple single-flow automations can go live in 1 to 7 days.",
   },
   {
     q: "Do I need a tech team or developer to use this?",
@@ -22,10 +22,6 @@ const faqs = [
   {
     q: "What if the automation breaks or stops working?",
     a: "All packages include monitoring and support. If something breaks, we fix it — usually within 24 hours.",
-  },
-  {
-    q: "Is support available in Hindi or Marathi?",
-    a: "Yes. Our team speaks Hindi and English. WhatsApp support available for all clients.",
   },
   {
     q: "Can I start with just one automation?",

@@ -7,7 +7,7 @@ const timelineData = [
   {
     id: 1,
     title: "Free AI Audit",
-    date: "Week 1–2",
+    date: "1 to 7 days",
     content: "We map your business processes, identify automation gaps, and present a prioritised blueprint. No tech knowledge needed.",
     category: "Audit",
     icon: Search,
@@ -18,7 +18,7 @@ const timelineData = [
   {
     id: 2,
     title: "Design & Build",
-    date: "Week 2–4",
+    date: "1 to 7 days",
     content: "Our team builds your custom AI workflows using n8n, WhatsApp API, and AI agents — tested before a single line goes live.",
     category: "Build",
     icon: Code,
@@ -29,7 +29,7 @@ const timelineData = [
   {
     id: 3,
     title: "Launch & Integrate",
-    date: "Week 4–6",
+    date: "1 to 7 days",
     content: "We connect all your tools — CRM, WhatsApp, email, spreadsheets — and go live. You see results from Day 1.",
     category: "Launch",
     icon: Rocket,
@@ -40,7 +40,7 @@ const timelineData = [
   {
     id: 4,
     title: "Monitor & Optimise",
-    date: "Week 6+",
+    date: "1 to 7 days",
     content: "We track performance, fix errors, and keep improving your automations as your business grows.",
     category: "Optimise",
     icon: Activity,
@@ -62,7 +62,7 @@ export const ProcessSection = () => {
       <h2 className="text-center text-3xl md:text-5xl font-bold tracking-tighter leading-tight max-w-3xl mx-auto mb-6">
         From Idea to Automation
         <br />
-        <span className="text-accent">in 8–10 Weeks</span>
+        <span className="text-accent">in 1 to 7 days</span>
       </h2>
 
       <p className="text-center text-text-muted text-lg max-w-xl mx-auto mb-16 leading-relaxed">

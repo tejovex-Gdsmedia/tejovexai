@@ -56,11 +56,6 @@ const services = [
     title: "AI Customer Support",
     desc: "Deploy intelligent chatbots on WhatsApp, website, and Instagram. Instant replies, zero wait time, zero missed queries.",
   },
-  {
-    icon: "👥",
-    title: "AI HR & Recruitment",
-    desc: "Automate job postings, CV screening, interview scheduling, onboarding checklists, and attendance tracking.",
-  },
 ];
 
 const containerVariants = {
@@ -106,7 +101,7 @@ export const CapabilitiesSection = () => {
       </p>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

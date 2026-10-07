@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   { q: 'What exactly does Tejovex do?', a: 'We build AI-powered automation systems tailored for Indian businesses to save time and increase revenue.' },
-  { q: 'How long does implementation take?', a: 'Most projects are deployed within 2-4 weeks, depending on complexity.' },
+  { q: 'How long does implementation take?', a: 'Most projects are deployed within 1 to 7 days, depending on complexity.' },
   { q: 'Do we need a tech team?', a: 'No, we handle the technical side, monitoring, and maintenance.' },
   { q: 'How many projects have you delivered?', a: 'We have successfully delivered over 120+ AI projects.' },
   { q: 'Can small businesses with limited budget use you?', a: 'Yes, we have modular solutions designed specifically for growing businesses.' },

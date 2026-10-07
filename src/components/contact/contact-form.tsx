@@ -54,7 +54,23 @@ export default function ContactForm() {
     e.preventDefault();
     setSubmitState('loading');
 
-    setTimeout(() => {
+    try {
+      await fetch(process.env.NEXT_PUBLIC_SHEETS_WEBHOOK_URL!, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          submittedAt: new Date().toISOString(),
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          company: formData.company,
+          industry: formData.industry,
+          automationNeeds: selectedPills.join(', '),
+          message: formData.message
+        })
+      });
+
       setSubmitState('success');
       setTimeout(() => {
         setFormData({ name: '', phone: '', email: '', company: '', industry: '', message: '' });
@@ -62,7 +78,10 @@ export default function ContactForm() {
         setCharCount(0);
         setSubmitState('idle');
       }, 2000);
-    }, 1500);
+    } catch {
+      setSubmitState('error');
+      setTimeout(() => setSubmitState('idle'), 3000);
+    }
   };
 
   const togglePill = (pill: string) => {

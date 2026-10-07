@@ -21,7 +21,8 @@ export default function ContactMethods() {
       title: "Book a Discovery Call",
       subtitle: "30-min free call — we map your automation plan",
       action: "Open Calendar →",
-      href: "https://cal.com/tejovex",
+      href: "https://calendly.com/gdstejovex/tejovexai",
+      target: "_blank",
       color: "#accent",
     },
     {

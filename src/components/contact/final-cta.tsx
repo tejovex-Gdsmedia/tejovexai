@@ -34,7 +34,7 @@ export const FinalCTASection = () => {
       {/* CTAs */}
       <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
         <a
-          href="https://wa.me/91"
+          href="https://wa.me/917400168255"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-8 py-4 rounded-full bg-green-600 text-white font-bold text-sm hover:scale-105 transition-transform"
@@ -42,7 +42,7 @@ export const FinalCTASection = () => {
           Chat on WhatsApp →
         </a>
         <a
-          href="https://calendly.com/tejovex"
+          href="https://calendly.com/gdstejovex/tejovexai"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-8 py-4 rounded-full border border-accent text-accent font-bold text-sm hover:bg-accent/10 transition-colors"
@@ -56,7 +56,7 @@ export const FinalCTASection = () => {
         <span>📍 Based in Mumbai, India</span>
         <span>🌐 Available for Worldwide Projects</span>
         <span>✅ No Lock-in Contracts</span>
-        <span>⚡ Results in 8–10 Weeks</span>
+        <span>⚡ Results in 1 to 7 days</span>
       </div>
     </section>
   );
