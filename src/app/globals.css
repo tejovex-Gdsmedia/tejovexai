@@ -73,6 +73,20 @@ body {
   overflow-x: hidden;
 }
 
+/* Mobile one-tap fix: without this, touch browsers run their default
+   double-tap-to-zoom gesture detection on every element, which is the
+   standard cause of interactive elements needing a first "hover" tap
+   before a second tap registers as a click. This removes that delay
+   without changing any click/hover logic, styling, or layout. */
+a,
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+.cursor-pointer {
+  touch-action: manipulation;
+}
+
 body {
   background: var(--bg);
   color: var(--text);

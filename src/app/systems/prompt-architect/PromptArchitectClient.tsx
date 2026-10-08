@@ -44,13 +44,13 @@ export default function PromptArchitectClient() {
       <section className="relative min-h-[80vh] w-full bg-bg/60 flex flex-col items-center justify-center overflow-hidden pt-20 px-8">
         {/* Animated Orbs */}
         <motion.div
-          className="absolute w-[400px] h-[400px] rounded-full bg-accent/20 blur-[150px] opacity-30"
+          className="absolute w-[400px] h-[400px] rounded-full bg-accent/20 blur-[150px] opacity-30 pointer-events-none"
           animate={{ x: [0, 30, 0], y: [0, -30, 0] }}
           transition={{ duration: 10, repeat: Infinity, repeatType: "mirror" }}
           style={{ top: "10%", left: "5%" }}
         />
         <motion.div
-          className="absolute w-[500px] h-[500px] rounded-full bg-accent-secondary/20 blur-[200px] opacity-10"
+          className="absolute w-[500px] h-[500px] rounded-full bg-accent-secondary/20 blur-[200px] opacity-10 pointer-events-none"
           animate={{ x: [0, -30, 0], y: [0, 30, 0] }}
           transition={{ duration: 12, repeat: Infinity, repeatType: "mirror" }}
           style={{ top: "20%", right: "10%" }}

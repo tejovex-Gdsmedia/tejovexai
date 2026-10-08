@@ -16,12 +16,12 @@ export default function AboutHero() {
         <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
             {/* Background Orbs */}
             <motion.div
-                className="absolute w-[400px] h-[400px] rounded-full bg-accent/20 blur-[120px] opacity-30"
+                className="absolute w-[400px] h-[400px] rounded-full bg-accent/20 blur-[120px] opacity-30 pointer-events-none"
                 animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             />
             <motion.div
-                className="absolute w-[400px] h-[400px] rounded-full bg-accent-secondary/20 blur-[120px] opacity-20"
+                className="absolute w-[400px] h-[400px] rounded-full bg-accent-secondary/20 blur-[120px] opacity-20 pointer-events-none"
                 animate={{ x: [0, -100, 0], y: [0, 50, 0] }}
                 transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
             />
