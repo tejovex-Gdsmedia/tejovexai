@@ -52,10 +52,10 @@ export const Navbar = () => {
         </Link>
 
         {/* Systems Dropdown Trigger */}
-        <div className="relative">
+        <div className="relative group">
           <button
             onClick={() => setIsSystemsOpen(!isSystemsOpen)}
-            className={`flex items-center gap-1.5 transition-colors group text-sm ${
+            className={`flex items-center gap-1.5 transition-colors text-sm ${
               isActive('/systems') ? 'text-accent font-semibold' : 'text-text hover:text-accent'
             }`}
           >

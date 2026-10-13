@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 interface SystemsDropdownProps {
@@ -42,73 +41,76 @@ export default function SystemsDropdown({ isOpen, onClose }: SystemsDropdownProp
     onClose();
   };
 
+  const handleQuotationMakerClick = () => {
+    router.push('/systems/ai-quotation-maker');
+    onClose();
+  };
+
+  const systems = [
+    {
+      icon: '⚙️',
+      title: 'Prompt Architect',
+      description: 'Build and refine AI prompts for your business',
+      onClick: handlePromptArchitectClick,
+    },
+    {
+      icon: '🧾',
+      title: 'AI Quotation Maker',
+      description: 'Generate instant, professional quotations with AI',
+      onClick: handleQuotationMakerClick,
+    },
+  ];
+
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          ref={dropdownRef}
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
-          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50"
-          style={{
-            minWidth: '320px',
-            maxWidth: '380px',
-          }}
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{
-              type: 'spring',
-              stiffness: 300,
-              damping: 25,
-            }}
-            onClick={handlePromptArchitectClick}
-            className="p-5 rounded-2xl cursor-pointer transition-all duration-300 relative"
-            style={{
-              backgroundColor: '#0f0f0f',
-              border: '1px solid rgba(255,255,255,0.12)',
-              boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
-            }}
+    <div
+      ref={dropdownRef}
+      className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 rounded-2xl overflow-hidden border border-text/10
+        origin-top transition-all duration-200 ease-out
+        ${isOpen ? 'visible opacity-100 translate-y-0 scale-100' : 'invisible opacity-0 -translate-y-1 scale-95'}
+        group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100
+        group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:scale-100`}
+      style={{
+        width: '460px',
+        boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
+      }}
+    >
+      {/* Two-column mega-menu grid */}
+      <div className="grid grid-cols-2 bg-surface">
+        {systems.map((system, i) => (
+          <button
+            key={system.title}
+            type="button"
+            onClick={system.onClick}
+            className={`flex flex-col items-start gap-2 p-4 text-left cursor-pointer transition-colors hover:bg-accent/5 focus:bg-accent/5 outline-none ${
+              i > 0 ? 'border-l border-text/10' : ''
+            }`}
           >
-            {/* Live Now Badge */}
-            <div
-              className="absolute top-5 right-5 px-2.5 py-1 rounded-full text-xs font-semibold"
-              style={{
-                backgroundColor: 'rgba(74,222,128,0.15)',
-                color: '#4ade80',
-              }}
-            >
-              Live Now
+            {/* Icon square with live indicator badge */}
+            <div className="relative">
+              <div className="w-9 h-9 rounded-lg flex items-center justify-center text-lg bg-accent/10">
+                {system.icon}
+              </div>
+              <span
+                className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full ring-2 ring-surface bg-green-500"
+                title="Live Now"
+              />
             </div>
 
-            {/* Icon */}
-            <div className="text-3xl mb-3" style={{ color: '#f0c8a0' }}>
-              ⚙️
+            {/* Title + subtitle */}
+            <div className="min-w-0 w-full">
+              <h3
+                className="text-sm font-semibold text-text leading-snug"
+                style={{ fontFamily: 'var(--font-body)', letterSpacing: 'normal' }}
+              >
+                {system.title}
+              </h3>
+              <p className="text-xs text-text-muted">
+                {system.description}
+              </p>
             </div>
-
-            {/* Title */}
-            <h3 className="text-base font-semibold text-white mb-1">
-              Prompt Architect
-            </h3>
-
-            {/* Description */}
-            <p className="text-xs text-white/50 mb-4">
-              Build and refine AI prompts for your business
-            </p>
-
-            {/* Divider */}
-            <div className="h-px bg-white/10 mb-3"></div>
-
-            {/* Explore Link */}
-            <div className="text-xs font-semibold" style={{ color: '#f0c8a0' }}>
-              Explore →
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
