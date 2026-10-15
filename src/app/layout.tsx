@@ -78,9 +78,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${geistSans.variable} ${geistMono.variable} ${badgeFont.variable} ${problemBadgeFont.variable} h-full antialiased`}
     >
       <head>
-        {/* Google Analytics - Replace G-XXXXXXXXXX with your actual GA4 Measurement ID */}
+        {/* Google tag (gtag.js) - Google Analytics 4 */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=G-Y6L1DY8KJP"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX', {
+            gtag('config', 'G-Y6L1DY8KJP', {
               page_path: window.location.pathname,
             });
           `}
