@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     shortcut: "/tejo-logo.png",
     apple: "/tejo-logo.png",
   },
+  verification: {
+    google: "7EE0Qa4JZant0UzG4gi5SQ4sDHAIBag537ZWmil0t3o",
+  },
   openGraph: {
     title: "Tejovex AI | AI Automation & Intelligent Business Systems",
     description: "Tejovex AI helps businesses automate operations, sales, marketing and customer support with intelligent AI agents and connected workflows.",
