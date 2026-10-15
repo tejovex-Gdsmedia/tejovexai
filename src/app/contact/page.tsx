@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Contact Tejovex AI | Get Your Free AI Audit Today",
   description: "Ready to automate your business? Contact Tejovex AI for a free AI audit and discovery call. WhatsApp support available 24/7.",
   alternates: {
-    canonical: "https://tejovex.ai/contact",
+    canonical: "https://tejovexai.in/contact",
   },
   openGraph: {
     title: "Contact Tejovex AI | Get Your Free AI Audit Today",
     description: "Ready to automate your business? Contact Tejovex AI for a free AI audit and discovery call.",
-    url: "https://tejovex.ai/contact",
+    url: "https://tejovexai.in/contact",
     type: "website",
   },
 };

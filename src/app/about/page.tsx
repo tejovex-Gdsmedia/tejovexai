@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   title: "About Tejovex AI | Our Story, Values & Mission",
   description: "Learn about Tejovex AI's mission to empower Indian MSMEs with intelligent AI automation. Discover our values, team, and commitment to business transformation.",
   alternates: {
-    canonical: "https://tejovex.ai/about",
+    canonical: "https://tejovexai.in/about",
   },
   openGraph: {
     title: "About Tejovex AI | Our Story, Values & Mission",
     description: "Learn about Tejovex AI's mission to empower Indian MSMEs with intelligent AI automation.",
-    url: "https://tejovex.ai/about",
+    url: "https://tejovexai.in/about",
     type: "website",
   },
 };

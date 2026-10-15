@@ -39,7 +39,7 @@ export default function ContactHero() {
         </motion.div>
 
         {/* Main Headline - Word Reveal */}
-        <motion.div className="mb-8">
+        <motion.h1 className="mb-8">
           <div className="flex flex-wrap justify-center gap-3">
             {words.map((word, i) => (
               <div key={i} className="overflow-hidden">
@@ -57,7 +57,7 @@ export default function ContactHero() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.h1>
 
         {/* Sub Text - Character Reveal */}
         <motion.div

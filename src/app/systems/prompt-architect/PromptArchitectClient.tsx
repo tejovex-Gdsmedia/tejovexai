@@ -65,7 +65,7 @@ export default function PromptArchitectClient() {
           </motion.div>
 
           {/* Main Headline - Word Reveal */}
-          <motion.div className="mb-8">
+          <motion.h1 className="mb-8">
             <div className="flex flex-wrap justify-center gap-3">
               {["Prompt", "Architect"].map((word, i) => (
                 <div key={i} className="overflow-hidden">
@@ -83,7 +83,7 @@ export default function PromptArchitectClient() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </motion.h1>
 
           {/* Subtitle */}
           <motion.div

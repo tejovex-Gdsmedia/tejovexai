@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /.next
 
-Sitemap: https://tejovex.ai/sitemap.xml
+Sitemap: https://tejovexai.in/sitemap.xml

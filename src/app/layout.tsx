@@ -37,12 +37,9 @@ const problemBadgeFont = Anton({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tejovex.ai"),
+  metadataBase: new URL("https://tejovexai.in"),
   title: "Tejovex AI | AI Automation & Intelligent Business Systems",
   description: "Tejovex AI helps businesses automate operations, sales, marketing and customer support with intelligent AI agents and connected workflows.",
-  alternates: {
-    canonical: "https://tejovex.ai",
-  },
   icons: {
     icon: "/tejo-logo.png",
     shortcut: "/tejo-logo.png",
@@ -51,11 +48,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tejovex AI | AI Automation & Intelligent Business Systems",
     description: "Tejovex AI helps businesses automate operations, sales, marketing and customer support with intelligent AI agents and connected workflows.",
-    url: "https://tejovex.ai",
+    url: "https://tejovexai.in",
     siteName: "Tejovex AI",
     images: [
       {
-        url: "https://tejovex.ai/og-image.png",
+        url: "https://tejovexai.in/og-image.png",
         width: 1200,
         height: 630,
         alt: "Tejovex AI - AI Automation Platform",
@@ -67,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tejovex AI | AI Automation & Intelligent Business Systems",
     description: "Tejovex AI helps businesses automate operations, sales, marketing and customer support with intelligent AI agents and connected workflows.",
-    images: ["https://tejovex.ai/og-image.png"],
+    images: ["https://tejovexai.in/og-image.png"],
   },
 };
 
@@ -93,7 +90,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             });
           `}
         </Script>
-        <link rel="canonical" href="https://tejovex.ai" />
       </head>
       <body className="min-h-full flex flex-col">
         <GridPulse className="fixed inset-0 -z-10" />

@@ -2,12 +2,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export const WordReveal = ({ text, className, stagger = 0.08, initialY = "110%", animateY = "0%" }: {
+export const WordReveal = ({ text, className, stagger = 0.08, initialY = "110%", animateY = "0%", as = "div" }: {
   text: string,
   className?: string,
   stagger?: number,
   initialY?: string,
-  animateY?: string
+  animateY?: string,
+  /** Semantic element to render as, e.g. "h1" for a page's main headline. Defaults to "div". */
+  as?: "div" | "h1" | "h2" | "h3"
 }) => {
   const words = text.split(" ");
 
@@ -24,8 +26,10 @@ export const WordReveal = ({ text, className, stagger = 0.08, initialY = "110%",
     }
   };
 
+  const MotionTag = motion[as];
+
   return (
-    <motion.div
+    <MotionTag
       className={`flex flex-wrap ${className}`}
       variants={containerVariants}
       initial="hidden"
@@ -39,6 +43,6 @@ export const WordReveal = ({ text, className, stagger = 0.08, initialY = "110%",
           </motion.span>
         </span>
       ))}
-    </motion.div>
+    </MotionTag>
   );
 };

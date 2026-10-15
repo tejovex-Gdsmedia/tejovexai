@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tejovex.ai';
+  const baseUrl = 'https://tejovexai.in';
 
   return [
     {
@@ -24,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/systems/prompt-architect`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/systems/ai-quotation-maker`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

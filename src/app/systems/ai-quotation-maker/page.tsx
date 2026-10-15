@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "AI Quotation Maker | Instant AI Quotation Generator",
   description: "Generate instant, professional quotations with AI. AI Quotation Maker is the fastest way to create accurate, branded quotes for your business.",
   alternates: {
-    canonical: "https://tejovex.ai/systems/ai-quotation-maker",
+    canonical: "https://tejovexai.in/systems/ai-quotation-maker",
   },
   openGraph: {
     title: "AI Quotation Maker | Instant AI Quotation Generator",
     description: "Generate instant, professional quotations with AI. Fast, consistent, and ready to send to your client in minutes.",
-    url: "https://tejovex.ai/systems/ai-quotation-maker",
+    url: "https://tejovexai.in/systems/ai-quotation-maker",
     type: "website",
   },
 };

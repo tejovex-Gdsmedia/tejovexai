@@ -35,6 +35,7 @@ export default function AboutHero() {
             </motion.div>
 
             <WordReveal
+                as="h1"
                 text="Building the Future of Business with AI"
                 className="text-6xl font-bold text-text mb-6 text-center justify-center max-w-4xl"
             />

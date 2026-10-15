@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: "Tejovex AI | AI Automation & Intelligent Business Systems",
   description: "Tejovex AI helps Indian MSMEs automate operations, sales, marketing and customer support with intelligent AI agents working 24×7 at lowest cost.",
   alternates: {
-    canonical: "https://tejovex.ai",
+    canonical: "https://tejovexai.in",
   },
   openGraph: {
     title: "Tejovex AI | AI Automation & Intelligent Business Systems",
     description: "Tejovex AI helps Indian MSMEs automate operations, sales, marketing and customer support with intelligent AI agents working 24×7.",
-    url: "https://tejovex.ai",
+    url: "https://tejovexai.in",
     type: "website",
   },
 };
