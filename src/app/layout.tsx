@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navigation/navbar";
 import { Footer } from "@/components/common/footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { GridPulse } from "@/components/ui/grid-pulse";
+import ChatWidgetLoader from "@/components/chat/ChatWidgetLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -100,6 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-grow pt-24">{children}</main>
         <Footer />
         <CookieBanner />
+        <ChatWidgetLoader />
       </body>
     </html>
   );

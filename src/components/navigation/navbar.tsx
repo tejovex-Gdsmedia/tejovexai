@@ -6,9 +6,15 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import SystemsDropdown from './systems-dropdown';
 
+const SYSTEMS = [
+  { title: 'Prompt Architect', href: '/systems/prompt-architect' },
+  { title: 'AI Quotation Maker', href: '/systems/ai-quotation-maker' },
+];
+
 export const Navbar = () => {
   const [isSystemsOpen, setIsSystemsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileSystemsOpen, setIsMobileSystemsOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -129,13 +135,47 @@ export const Navbar = () => {
             >
               About
             </Link>
-            <Link
-              href="/systems/prompt-architect"
-              className={`${getLinkClass('/systems')} text-sm py-2`}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Systems
-            </Link>
+            <div>
+              <button
+                type="button"
+                onClick={() => setIsMobileSystemsOpen(!isMobileSystemsOpen)}
+                className={`flex w-full items-center justify-between ${getLinkClass('/systems')} text-sm py-2`}
+              >
+                Systems
+                <svg
+                  className={`w-4 h-4 transition-transform duration-300 ${
+                    isMobileSystemsOpen ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isMobileSystemsOpen && (
+                <div className="flex flex-col gap-3 pl-4 pt-2">
+                  {SYSTEMS.map((system) => (
+                    <Link
+                      key={system.href}
+                      href={system.href}
+                      className={`${getLinkClass(system.href)} text-sm py-1`}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileSystemsOpen(false);
+                      }}
+                    >
+                      {system.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             <Link
               href="/contact"
               className={`${getLinkClass('/contact')} text-sm py-2`}
