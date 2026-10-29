@@ -106,7 +106,7 @@ export default function PromptArchitectClient() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://app.tejovexai.in/', '_blank')}
+              onClick={() => window.open('https://prompt.tejovexai.in/en', '_blank')}
               className="px-8 py-3 rounded-lg font-semibold transition-all"
               style={{
                 backgroundColor: '#f0c8a0',
@@ -187,7 +187,7 @@ export default function PromptArchitectClient() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://app.tejovexai.in/', '_blank')}
+              onClick={() => window.open('https://prompt.tejovexai.in/en', '_blank')}
               className="px-8 py-3 rounded-lg font-semibold transition-all"
               style={{
                 backgroundColor: '#f0c8a0',
@@ -220,7 +220,7 @@ export default function PromptArchitectClient() {
             viewport={{ once: true }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.open('https://app.tejovexai.in/', '_blank')}
+            onClick={() => window.open('https://prompt.tejovexai.in/en', '_blank')}
             className="px-8 py-3 rounded-lg font-semibold transition-all mb-6"
             style={{
               backgroundColor: '#f0c8a0',
